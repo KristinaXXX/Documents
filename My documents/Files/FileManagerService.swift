@@ -26,25 +26,50 @@ protocol FileManagerServiceProtocol {
 class FileManagerService: FileManagerServiceProtocol {
     
     private let pathForFolder: String
+    private let settingsService = SettingsService()
     
-    private var items: [String] {
-        return (try? FileManager.default.contentsOfDirectory(atPath: pathForFolder)) ?? []
-    }
+    private var items: [String] = [] //{
     
-    private var contents: [ContentFile] {
-        var contents: [ContentFile] = []
-        for item in items {
-            contents.append(ContentFile(name: item, type: isDirectory(item) ? .folder : .file))
-        }
-        return contents
-    }
+    private let fileByteCountFormatter: ByteCountFormatter = {
+        let bcf = ByteCountFormatter()
+        bcf.allowedUnits = [.useMB]
+        bcf.countStyle = .file
+        return bcf
+    }()
+    
+    private var contents: [ContentFile] = []// {
     
     init(pathForFolder: String) {
         self.pathForFolder = pathForFolder
+        loadContents()
     }
     
     init() {
         pathForFolder = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        loadContents()
+    }
+    
+    func loadContents() {
+        contents.removeAll()
+        items = (try? FileManager.default.contentsOfDirectory(atPath: pathForFolder)) ?? []
+        
+        if settingsService.getSetting(typeSetting: "sorting") {
+            items.sort {
+                $0 < $1
+            }
+        } else {
+            items.sort {
+                $0 > $1
+            }
+        }
+        
+        for item in items {
+            contents.append(ContentFile(name: item, type: isDirectory(item) ? .folder : .file, size: getFileSize(filePath: getPath(name: item))))
+        }
+    }
+    
+    func needShowFileSize() -> Bool {
+        settingsService.getSetting(typeSetting: "showFileSize")
     }
     
     func isDirectoryIndex(_ index: Int) -> Bool {
@@ -66,8 +91,22 @@ class FileManagerService: FileManagerServiceProtocol {
         return objCBool.boolValue
     }
     
+    func getFileSize(filePath: String) -> String? {
+        if let attr = try? FileManager.default.attributesOfItem(atPath: filePath) {
+            if let size = attr[.size] as? Int64 {
+                let stringSize = fileByteCountFormatter.string(fromByteCount: size)
+                return stringSize
+            }
+        }
+        return nil
+    }
+    
     func getPath(at index: Int) -> String {
         pathForFolder + "/" + items[index]
+    }
+    
+    func getPath(name: String) -> String {
+        pathForFolder + "/" + name
     }
     
     func contentsOfDirectory() -> [ContentFile] {
@@ -76,6 +115,7 @@ class FileManagerService: FileManagerServiceProtocol {
     
     func createDirectory(name: String) {
         try? FileManager.default.createDirectory(atPath: pathForFolder + "/" + name, withIntermediateDirectories: true)
+        loadContents()
     }
     
     func createFile(image: UIImage) {
@@ -83,6 +123,7 @@ class FileManagerService: FileManagerServiceProtocol {
             let filename = pathForFolder + "/" + (image.assetName ?? "image") + ".png"
             try? data.write(to: URL(fileURLWithPath: filename))
         }
+        loadContents()
     }
     
     func removeContent(at index: Int) {

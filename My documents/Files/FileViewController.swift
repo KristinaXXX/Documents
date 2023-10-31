@@ -9,7 +9,9 @@ import UIKit
 
 class FileViewController: UIViewController {
 
+    private let viewModel: FileViewModel
     private let fileManagerService: FileManagerService
+    private var needShowFileSize: Bool = false
     private lazy var filesTableView: UITableView = {
         let tableView = UITableView(
             frame: .zero
@@ -35,6 +37,23 @@ class FileViewController: UIViewController {
         return createTabButton(imageName: "plus", selector: #selector(addImagePressed))
     }()
     
+    init(viewModel: FileViewModel) {
+        fileManagerService = FileManagerService()
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        title = "Documents"
+    }
+    
+    init(viewModel: FileViewModel, fileManagerService: FileManagerService) {
+        self.viewModel = viewModel
+        self.fileManagerService = fileManagerService
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -42,19 +61,10 @@ class FileViewController: UIViewController {
         setupConstraints()
     }
     
-    init() {
-        fileManagerService = FileManagerService()
-        super.init(nibName: nil, bundle: nil)
-        title = "Documents"
-    }
-    
-    init(fileManagerService: FileManagerService) {
-        self.fileManagerService = fileManagerService
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func viewWillAppear(_ animated: Bool) {
+        fileManagerService.loadContents()
+        needShowFileSize = fileManagerService.needShowFileSize()
+        filesTableView.reloadData()
     }
     
     private func addSubviews() {
@@ -109,12 +119,14 @@ extension FileViewController: UITableViewDataSource {
         var content = cell.defaultContentConfiguration()
         let contentFile = fileManagerService.contentsOfDirectory()[indexPath.row]
         content.text = contentFile.name
+        if needShowFileSize {
+            content.secondaryText = contentFile.size
+        }
         cell.contentConfiguration = content
         cell.accessoryType = (contentFile.type == .folder) ? .disclosureIndicator : .none
         return cell
         
     }
-
 }
 
 extension FileViewController: UITableViewDelegate {
@@ -125,7 +137,7 @@ extension FileViewController: UITableViewDelegate {
         switch contentFile.type {
         case .folder:
             let fileManagerService = FileManagerService(pathForFolder: fileManagerService.getPath(at: indexPath.row))
-            let nextViewController = FileViewController(fileManagerService: fileManagerService)
+            let nextViewController = FileViewController(viewModel: viewModel, fileManagerService: fileManagerService)
             nextViewController.title = contentFile.name
             navigationController?.pushViewController(nextViewController, animated: true)
            
