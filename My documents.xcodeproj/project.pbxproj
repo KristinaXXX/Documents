@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6123CFD52AEFD3CD0053DB9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFD42AEFD3CD0053DB9A /* LoginViewController.swift */; };
+		6123CFD72AEFD4520053DB9A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFD62AEFD4520053DB9A /* CustomButton.swift */; };
+		6123CFD92AEFD7740053DB9A /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFD82AEFD7740053DB9A /* KeychainService.swift */; };
+		6123CFDC2AEFE28B0053DB9A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 6123CFDB2AEFE28B0053DB9A /* KeychainAccess */; };
+		6123CFDE2AEFE5D30053DB9A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFDD2AEFE5D30053DB9A /* LoginViewModel.swift */; };
+		6123CFE02AEFE8420053DB9A /* LoginMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFDF2AEFE8420053DB9A /* LoginMode.swift */; };
+		6123CFE32AEFF4BA0053DB9A /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFE22AEFF4BA0053DB9A /* LoginCoordinator.swift */; };
+		6123CFE52AEFF70F0053DB9A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFE42AEFF70F0053DB9A /* MainCoordinator.swift */; };
+		6123CFE72AEFF72B0053DB9A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFE62AEFF72B0053DB9A /* MainTabBarController.swift */; };
+		6123CFE92AEFFA160053DB9A /* FactoryTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFE82AEFFA150053DB9A /* FactoryTab.swift */; };
+		6123CFEE2AEFFDDE0053DB9A /* FileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFED2AEFFDDE0053DB9A /* FileViewModel.swift */; };
+		6123CFF02AEFFE020053DB9A /* FilesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFEF2AEFFE020053DB9A /* FilesCoordinator.swift */; };
+		6123CFF32AEFFEE70053DB9A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFF22AEFFEE70053DB9A /* SettingsViewController.swift */; };
+		6123CFF52AEFFEF80053DB9A /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFF42AEFFEF80053DB9A /* SettingsViewModel.swift */; };
+		6123CFF72AEFFF1B0053DB9A /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFF62AEFFF1B0053DB9A /* SettingsCoordinator.swift */; };
+		6123CFF92AF01E170053DB9A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFF82AF01E170053DB9A /* Settings.swift */; };
+		6123CFFB2AF0AAB80053DB9A /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123CFFA2AF0AAB80053DB9A /* SettingsTableViewCell.swift */; };
 		61369CAF2AED223D005F0F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61369CAE2AED223D005F0F8F /* AppDelegate.swift */; };
 		61369CB12AED223D005F0F8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61369CB02AED223D005F0F8F /* SceneDelegate.swift */; };
 		61369CB32AED223D005F0F8F /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61369CB22AED223D005F0F8F /* FileViewController.swift */; };
@@ -16,9 +33,27 @@
 		61369CC52AEE4A2C005F0F8F /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61369CC42AEE4A2C005F0F8F /* ExtensionUIViewController.swift */; };
 		61369CC72AEE5461005F0F8F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61369CC62AEE5461005F0F8F /* ImagePicker.swift */; };
 		61369CC92AEE5880005F0F8F /* ContentFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61369CC82AEE5880005F0F8F /* ContentFile.swift */; };
+		615A6CFD2AF1040F006688FD /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615A6CFC2AF1040F006688FD /* UserDefaultsStorage.swift */; };
+		615A6D002AF11CFD006688FD /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615A6CFF2AF11CFD006688FD /* SettingsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6123CFD42AEFD3CD0053DB9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6123CFD62AEFD4520053DB9A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		6123CFD82AEFD7740053DB9A /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		6123CFDD2AEFE5D30053DB9A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		6123CFDF2AEFE8420053DB9A /* LoginMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMode.swift; sourceTree = "<group>"; };
+		6123CFE22AEFF4BA0053DB9A /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		6123CFE42AEFF70F0053DB9A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		6123CFE62AEFF72B0053DB9A /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		6123CFE82AEFFA150053DB9A /* FactoryTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryTab.swift; sourceTree = "<group>"; };
+		6123CFED2AEFFDDE0053DB9A /* FileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewModel.swift; sourceTree = "<group>"; };
+		6123CFEF2AEFFE020053DB9A /* FilesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesCoordinator.swift; sourceTree = "<group>"; };
+		6123CFF22AEFFEE70053DB9A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6123CFF42AEFFEF80053DB9A /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		6123CFF62AEFFF1B0053DB9A /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		6123CFF82AF01E170053DB9A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		6123CFFA2AF0AAB80053DB9A /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		61369CAB2AED223D005F0F8F /* My documents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My documents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61369CAE2AED223D005F0F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61369CB02AED223D005F0F8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +65,9 @@
 		61369CC42AEE4A2C005F0F8F /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		61369CC62AEE5461005F0F8F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		61369CC82AEE5880005F0F8F /* ContentFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentFile.swift; sourceTree = "<group>"; };
+		615A6CFC2AF1040F006688FD /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
+		615A6CFE2AF11178006688FD /* My documents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "My documents.entitlements"; sourceTree = "<group>"; };
+		615A6CFF2AF11CFD006688FD /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,12 +75,65 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6123CFDC2AEFE28B0053DB9A /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6123CFE12AEFF49E0053DB9A /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				6123CFE22AEFF4BA0053DB9A /* LoginCoordinator.swift */,
+				6123CFEF2AEFFE020053DB9A /* FilesCoordinator.swift */,
+				6123CFE42AEFF70F0053DB9A /* MainCoordinator.swift */,
+				6123CFF62AEFFF1B0053DB9A /* SettingsCoordinator.swift */,
+				6123CFE62AEFF72B0053DB9A /* MainTabBarController.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		6123CFEA2AEFFD930053DB9A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				6123CFE82AEFFA150053DB9A /* FactoryTab.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		6123CFEB2AEFFDA90053DB9A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6123CFD42AEFD3CD0053DB9A /* LoginViewController.swift */,
+				6123CFDD2AEFE5D30053DB9A /* LoginViewModel.swift */,
+				6123CFDF2AEFE8420053DB9A /* LoginMode.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6123CFEC2AEFFDC20053DB9A /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				61369CB22AED223D005F0F8F /* FileViewController.swift */,
+				61369CC82AEE5880005F0F8F /* ContentFile.swift */,
+				61369CC22AED256F005F0F8F /* FileManagerService.swift */,
+				6123CFED2AEFFDDE0053DB9A /* FileViewModel.swift */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		6123CFF12AEFFED20053DB9A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6123CFF22AEFFEE70053DB9A /* SettingsViewController.swift */,
+				6123CFFA2AF0AAB80053DB9A /* SettingsTableViewCell.swift */,
+				6123CFF82AF01E170053DB9A /* Settings.swift */,
+				6123CFF42AEFFEF80053DB9A /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		61369CA22AED223C005F0F8F = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +153,20 @@
 		61369CAD2AED223D005F0F8F /* My documents */ = {
 			isa = PBXGroup;
 			children = (
+				615A6CFE2AF11178006688FD /* My documents.entitlements */,
+				6123CFEA2AEFFD930053DB9A /* Factory */,
 				61369CAE2AED223D005F0F8F /* AppDelegate.swift */,
+				6123CFE12AEFF49E0053DB9A /* Coordinators */,
+				6123CFEB2AEFFDA90053DB9A /* Login */,
+				6123CFD82AEFD7740053DB9A /* KeychainService.swift */,
+				615A6CFC2AF1040F006688FD /* UserDefaultsStorage.swift */,
+				615A6CFF2AF11CFD006688FD /* SettingsService.swift */,
 				61369CB02AED223D005F0F8F /* SceneDelegate.swift */,
-				61369CB22AED223D005F0F8F /* FileViewController.swift */,
+				6123CFEC2AEFFDC20053DB9A /* Files */,
 				61369CC62AEE5461005F0F8F /* ImagePicker.swift */,
+				6123CFF12AEFFED20053DB9A /* Settings */,
 				61369CC42AEE4A2C005F0F8F /* ExtensionUIViewController.swift */,
-				61369CC22AED256F005F0F8F /* FileManagerService.swift */,
-				61369CC82AEE5880005F0F8F /* ContentFile.swift */,
+				6123CFD62AEFD4520053DB9A /* CustomButton.swift */,
 				61369CB72AED223E005F0F8F /* Assets.xcassets */,
 				61369CB92AED223E005F0F8F /* LaunchScreen.storyboard */,
 				61369CBC2AED223E005F0F8F /* Info.plist */,
@@ -92,6 +190,9 @@
 			dependencies = (
 			);
 			name = "My documents";
+			packageProductDependencies = (
+				6123CFDB2AEFE28B0053DB9A /* KeychainAccess */,
+			);
 			productName = "My documents";
 			productReference = 61369CAB2AED223D005F0F8F /* My documents.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +221,9 @@
 				Base,
 			);
 			mainGroup = 61369CA22AED223C005F0F8F;
+			packageReferences = (
+				6123CFDA2AEFE28B0053DB9A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 61369CAC2AED223D005F0F8F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,11 +251,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				61369CB32AED223D005F0F8F /* FileViewController.swift in Sources */,
+				6123CFE52AEFF70F0053DB9A /* MainCoordinator.swift in Sources */,
+				6123CFE72AEFF72B0053DB9A /* MainTabBarController.swift in Sources */,
 				61369CC92AEE5880005F0F8F /* ContentFile.swift in Sources */,
+				6123CFF72AEFFF1B0053DB9A /* SettingsCoordinator.swift in Sources */,
+				6123CFDE2AEFE5D30053DB9A /* LoginViewModel.swift in Sources */,
+				6123CFF32AEFFEE70053DB9A /* SettingsViewController.swift in Sources */,
+				6123CFD72AEFD4520053DB9A /* CustomButton.swift in Sources */,
+				6123CFE32AEFF4BA0053DB9A /* LoginCoordinator.swift in Sources */,
+				6123CFD92AEFD7740053DB9A /* KeychainService.swift in Sources */,
+				6123CFEE2AEFFDDE0053DB9A /* FileViewModel.swift in Sources */,
 				61369CC52AEE4A2C005F0F8F /* ExtensionUIViewController.swift in Sources */,
 				61369CAF2AED223D005F0F8F /* AppDelegate.swift in Sources */,
+				6123CFE92AEFFA160053DB9A /* FactoryTab.swift in Sources */,
+				6123CFF02AEFFE020053DB9A /* FilesCoordinator.swift in Sources */,
+				6123CFD52AEFD3CD0053DB9A /* LoginViewController.swift in Sources */,
+				615A6CFD2AF1040F006688FD /* UserDefaultsStorage.swift in Sources */,
+				6123CFF52AEFFEF80053DB9A /* SettingsViewModel.swift in Sources */,
+				6123CFE02AEFE8420053DB9A /* LoginMode.swift in Sources */,
 				61369CC72AEE5461005F0F8F /* ImagePicker.swift in Sources */,
+				615A6D002AF11CFD006688FD /* SettingsService.swift in Sources */,
 				61369CB12AED223D005F0F8F /* SceneDelegate.swift in Sources */,
+				6123CFFB2AF0AAB80053DB9A /* SettingsTableViewCell.swift in Sources */,
+				6123CFF92AF01E170053DB9A /* Settings.swift in Sources */,
 				61369CC32AED256F005F0F8F /* FileManagerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "My documents/My documents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DDMVZ4HQY9;
@@ -329,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "My documents/My documents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DDMVZ4HQY9;
@@ -378,6 +502,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6123CFDA2AEFE28B0053DB9A /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6123CFDB2AEFE28B0053DB9A /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6123CFDA2AEFE28B0053DB9A /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 61369CA32AED223C005F0F8F /* Project object */;
 }
